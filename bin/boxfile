@@ -14,7 +14,7 @@ set -e
 nos_init "$@"
 
 # source common lib
-. ${engine_lib_dir}/nodejs.sh
+. ${engine_lib_dir}/r.sh
 
 cat <<END
 run.config:

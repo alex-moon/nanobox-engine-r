@@ -1,13 +1,13 @@
-# Node.js
+# R
 
-This is a Node.js engine for running node apps with [Nanobox](http://nanobox.io).
+This is a R engine for running R apps with [Nanobox](http://nanobox.io).
 
 ## Usage
-To use the Node.js engine, specify `nodejs` as your `engine` in your boxfile.yml
+To use the R engine, specify `r` as your `engine` in your boxfile.yml
 
 ```yaml
 run.config:
-  engine: nodejs
+  engine: r
 ```
 
 ## Build Process
@@ -21,9 +21,9 @@ This engine exposes configuration options through the [Boxfile](http://docs.nano
 #### Overview of Boxfile Configuration Options
 ```yaml
 run.config:
-  engine: nodejs
+  engine: r
   engine.config:
-    runtime: nodejs-4.4
+    runtime: r-4.4
     dep_manager: yarn
     python_version: python-2.7
 ```
@@ -31,29 +31,29 @@ run.config:
 ---
 
 #### runtime
-Specifies which Node.js runtime and version to use. The following runtimes are available:
+Specifies which R runtime and version to use. The following runtimes are available:
 
-- nodejs-0.8
-- nodejs-0.10
-- nodejs-0.12
-- nodejs-4.8
-- nodejs-5.12
-- nodejs-6.11
-- nodejs-7.10
-- nodejs-8.6
-- nodejs-8.9
+- r-0.8
+- r-0.10
+- r-0.12
+- r-4.8
+- r-5.12
+- r-6.11
+- r-7.10
+- r-8.6
+- r-8.9
 
 ```yaml
 run.config:
-  engine: nodejs
+  engine: r
   engine.config:
-    runtime: nodejs-8.6
+    runtime: r-8.6
 ```
 
 ---
 
 #### dep_manager
-Specifies whether the engine should use npm or yarn to fetch node modules. Defaults to `yarn`.
+Specifies whether the engine should use npm or yarn to fetch R modules. Defaults to `yarn`.
 
 ```yaml
 run.config:
@@ -80,4 +80,4 @@ run.config:
 ---
 
 ## Help & Support
-This is a generic (non-framework-specific) Node.js engine provided by [Nanobox](http://nanobox.io). If you need help with this engine, you can reach out to us in the [#nanobox IRC channel](http://webchat.freenode.net/?channels=nanobox). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/pagodabox/nanobox-engine-nodejs/issues/new).
+This is a generic (non-framework-specific) R engine provided by [Nanobox](http://nanobox.io). If you need help with this engine, you can reach out to us in the [#nanobox IRC channel](http://webchat.freeR.net/?channels=nanobox). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/pagodabox/nanobox-engine-R/issues/new).
