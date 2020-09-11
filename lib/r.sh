@@ -81,23 +81,6 @@ uninstall_build_dependencies() {
 query_dependencies() {
   deps=()
 
-  # mysql
-  if [[ `grep 'mysql' $(nos_code_dir)/package.json` ]]; then
-    deps+=(mysql-client)
-  fi
-  # memcache
-  if [[ `grep 'memcache' $(nos_code_dir)/package.json` ]]; then
-    deps+=(libmemcached)
-  fi
-  # postgres
-  if [[ `grep 'postgres' $(nos_code_dir)/package.json` ]]; then
-    deps+=(postgresql94-client)
-  fi
-  # redis
-  if [[ `grep 'redis\|spade\|rebridge' $(nos_code_dir)/package.json` ]]; then
-    deps+=(redis)
-  fi
-  
   echo "${deps[@]}"
 }
 
